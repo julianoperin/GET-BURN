@@ -1,7 +1,5 @@
 let controller;
 let slideScene;
-let pageScene;
-let detailScene;
 
 const animateSlides = () => {
   //Init Controller
@@ -9,7 +7,7 @@ const animateSlides = () => {
   //Select some things
   const sliders = document.querySelectorAll(".slide");
   //Loop over each slide
-  sliders.forEach((slide, index, slides) => {
+  sliders.forEach((slide) => {
     const revealImg = slide.querySelector(".reveal-img");
     const img = slide.querySelector("img");
     const revealText = slide.querySelector(".reveal-text");
@@ -35,5 +33,4 @@ const animateSlides = () => {
       .addTo(controller);
   });
 };
-
 export default animateSlides;
