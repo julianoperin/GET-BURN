@@ -1,3 +1,4 @@
+//  Cursor
 .cursor {
   width: 3rem;
   height: 3rem;
@@ -12,8 +13,10 @@
 }
 .cursor.nav-active {
   background: #ffeb00;
-  transform: scale(3);
+  transform: scale(2.2);
+  transform-origin: 90% 90%;
 }
+
 .cursor.explore-active {
   background: #ffeb00;
   transform: scale(3);
@@ -25,55 +28,3 @@
   font-size: 0.5rem;
   transform: translate(-50%, -50%);
 }
-
-#logo {
-  color: white;
-  font-family: "Abril Fatface";
-}
-.nav-header {
-  min-height: 10vh;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  width: 80%;
-  margin: auto;
-  padding: 2rem 0rem;
-  z-index: 2;
-  position: relative;
-}
-.line1,
-.line2 {
-  width: 3rem;
-  height: 0.2rem;
-  margin: 0.4rem;
-  background: white;
-  pointer-events: none;
-}
-
-// #logo {
-//   color: white;
-//   font-family: "Abril Fatface";
-// }
-// .nav-header {
-//   min-height: 10vh;
-//   font-size: 1rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   color: white;
-//   width: 80%;
-//   margin: auto;
-//   padding: 2rem 0rem;
-//   z-index: 2;
-//   position: relative;
-// }
-// .line1,
-// .line2 {
-//   width: 3rem;
-//   height: 0.2rem;
-//   margin: 0.4rem;
-//   background: white;
-//   pointer-events: none;
-// }

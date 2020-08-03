@@ -1,0 +1,123 @@
+//! Navbar not active
+#logo {
+  background: -webkit-linear-gradient(left, #d1d5da, #292b31);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  color: white;
+  margin: 0rem 2rem 0rem 3.5rem;
+  padding: 1rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+
+.wrap-burger {
+  cursor: pointer;
+  padding: 0.7rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-logo {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15rem;
+}
+
+.flex-logo a {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.media-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+//  Lines of burger
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #d1d5da;
+  pointer-events: none;
+  text-align: center;
+}
+
+// Social Media Icons
+.media {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.social-media ul li {
+  display: inline-block;
+  padding: 25px;
+  font-size: 25px;
+  color: #d1d5da;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+//! Navbar active
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffeb00;
+  color: #292b31;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 52% -10%);
+  -webkit-clip-path: circle(50px at 52% -10%);
+}
+
+.nav-links {
+  font-size: 3rem;
+  flex-basis: 30rem;
+}
+.nav-links h3 {
+  padding: 3rem 0rem;
+}
+.contact {
+  flex-basis: 30rem;
+}
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #292b31;
+  left: 0;
+  top: -15%;
+}

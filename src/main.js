@@ -1,28 +1,30 @@
 import "./scss/app.scss";
-import heroOne from "./components/hero-one";
-import animateSlides from "./components/hero-two"; // 3 slides
-import detailAnimation from "./components/yoga"; // 3 slides
+// import home from "./components/home";
+import animateSlides from "./components/hero-two"; // first 3 slides
+import detailAnimation from "./components/yoga"; // second 3 slides
 
-heroOne();
+// home();
 animateSlides();
 detailAnimation();
 
 // NAV TOGGLE
-const burger = document.querySelector(".burger");
+const burger = document.querySelector(".wrap-burger");
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
     gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
     gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "black" });
     gsap.to("#logo", 1, { color: "black" });
-    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    gsap.to(".social-media li", 1, { color: "black" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 52% -10%)" });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
-    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
-    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "white" });
-    gsap.to("#logo", 1, { color: "white" });
-    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "#d1d5da" });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "#d1d5da" });
+    gsap.to("#logo", 1, { color: "#d1d5da" });
+    gsap.to(".social-media li", 1, { color: "#d1d5da" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 52% -10%)" });
     document.body.classList.remove("hide");
   }
 }
@@ -36,11 +38,18 @@ function cursor(e) {
 }
 function activeCursor(e) {
   const item = e.target;
-  if (item.id === "logo" || item.classList.contains("burger")) {
+  // Select LOGO, burger
+  if (
+    item.id === "logo" ||
+    item.classList.contains("wrap-burger") ||
+    item.classList.contains("fa")
+  ) {
     mouse.classList.add("nav-active");
   } else {
     mouse.classList.remove("nav-active");
   }
+
+  // Explore btn
   if (item.classList.contains("explore")) {
     mouse.classList.add("explore-active");
     gsap.to(".title-swipe", 1, { y: "0%" });

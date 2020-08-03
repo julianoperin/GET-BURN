@@ -1,3 +1,21 @@
+//! General Code
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #292b31;
+  overflow-x: hidden;
+  position: relative;
+}
+.wrap-all {
+  position: absolute;
+}
+
+//! Transition for Barba JS
 .swipe {
   position: fixed;
   width: 100%;

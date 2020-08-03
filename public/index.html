@@ -4,108 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Professional Photographer ..." />
-    <link rel="shortcut icon" type="image/png" href="../src/img/favicon.png" />
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+    <link rel="shortcut icon" type="image/png" href="../src/img/favicon.png" />
     <link rel="stylesheet" href="../src/scss/app.scss" />
     <title>Get Burn</title>
   </head>
-  <body>
-
-    <!-- Overlay -->
-    <div class="overlay">
-      <span>GET READY TO</span>
-      <h1>BURN</h1>
-    </div>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="nav-second">
-        <div class="logo">
-          <h1>
-            <span
-              >G R<br />
-              E E <br />
-              T A <br />
-              &nbsp;&nbsp; D <br />
-              &nbsp;&nbsp; Y</span
-            >
-            <br />
-            <span class="logo-b"></span>to burn</span>
-          </h1>
-        </div>
-
-        <div class="menu-links">
-          <ul>
-            <li><a href="pilates.html">about.</a></li>
-            <li><a href="pilates.html">pilates.</a></li>
-            <li><a href="yoga.html">yoga.</a></li>
-            <li><a href="pilates.html">contact.</a></li>
-          </ul>
-        </div>
-
-        <div class="scroll-down">scroll down</div>
+  <!-- Add code for barba.js -->
+  <body> 
+    <header class="nav-header">
+      <h1  class="flex-logo"><a href="pilates.html" id="logo">BURN</a></h1>
+      <div class="burger flex">
+        <div class="wrap-burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
       </div>
+      </div>
+      <div>
+        <div class="social-media media-flex">
+          <ul>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-facebook"></i></li>
+          </ul>
+      </div>
+    </header>
+    <!-- Add code for barba.js -->
+    <main> 
+     <section class="home-section">
+      <div class="left"></div>
+      <div class="right"></div>
 
-      <div class="text">
-        <div class="title-header">Motivation</div>
+     </section>
+    </main>
+
+    <!-- NavBar -->
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="pilates.html">Pilates</a>
+        </li>
+        <li>
+          <a href="yoga.html">Yoga</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="contact">
+        <h2>Stay in touch.</h2>
         <p>
-          Mauris elementum, dui ac sagittis <br />
-          cursus, libero elit sodales odio
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem
+          praesentium ea amet error quidem natus. Magnam explicabo sed tenetur?
         </p>
       </div>
+    </nav>
+    <!-- End of Navbar -->
 
-      <div class="contact-now">
-        <i class="fa fa-paper-plane"></i>
-        <a href="#">Contact us!</a>
-      </div>
-
-      <div class="media">
-        <ul>
-          <li><i class="fa fa-twitter"></i></li>
-          <li><i class="fa fa-pinterest"></i></li>
-          <li><i class="fa fa-instagram"></i></li>
-          <li><i class="fa fa-facebook"></i></li>
-
-        </ul>
-      </div>
-      <div class="ellipse-container">
-        <div class="ellipse thin"></div>
-        <div class="ellipse thick"></div>
-        <div class="ellipse yellow"></div>
-      </div>
+    <!-- Cursor -->
+    <div class="cursor">
+      <span class="cursor-text"></span>
     </div>
-
-        <!-- NavBar -->
-        <nav class="nav-bar">
-          <ul class="nav-links">
-            <li>
-              <a href="pilates.html">Home</a>
-            </li>
-            <li>
-              <a href="pilates.html">Pilates</a>
-            </li>
-            <li>
-              <a href="yoga.html">Yoga</a>
-            </li>
-            <li>
-              <a href="yoga.html">About</a>
-            </li>
-            <li>
-              <a href="yoga.html">Contact</a>
-            </li>
-          </ul>
-          <div class="contact">
-            <h2>Stay in touch.</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem
-              praesentium ea amet error quidem natus. Magnam explicabo sed tenetur?
-            </p>
-          </div>
-        </nav>
-        <!-- End of Navbar -->
-
+    <div class="swipe swipe1"></div>
+    <div class="swipe swipe2"></div>
+    <div class="swipe swipe3"></div>
 
     <!-- Barba -->
     <script src="https://unpkg.com/@barba/core"></script>
