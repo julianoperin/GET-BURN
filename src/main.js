@@ -1,9 +1,9 @@
 import "./scss/app.scss";
-// import home from "./components/home";
+import home from "./components/home";
 import animateSlides from "./components/hero-two"; // first 3 slides
 import detailAnimation from "./components/yoga"; // second 3 slides
 
-// home();
+home();
 animateSlides();
 detailAnimation();
 
@@ -17,6 +17,8 @@ function navToggle(e) {
     gsap.to("#logo", 1, { color: "black" });
     gsap.to(".social-media li", 1, { color: "black" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 52% -10%)" });
+    gsap.to(".nav-header", 1, { boxShadow: "none" });
+    gsap.to(".product-img", 0.5, { visibility: "hidden" });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
@@ -25,6 +27,17 @@ function navToggle(e) {
     gsap.to("#logo", 1, { color: "#d1d5da" });
     gsap.to(".social-media li", 1, { color: "#d1d5da" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 52% -10%)" });
+    gsap.to(
+      ".nav-header",
+      1,
+      {
+        delay: 0.5,
+        boxShadow:
+          "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)",
+      },
+      "-=1"
+    );
+    gsap.to(".product-img", 1, { delay: 0.5, visibility: "visible" });
     document.body.classList.remove("hide");
   }
 }
