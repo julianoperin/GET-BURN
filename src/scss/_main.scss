@@ -1,5 +1,9 @@
 //! General Code
 
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Roboto Condensed', sans-serif;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +11,7 @@
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   background: #292b31;
   overflow-x: hidden;
   position: relative;
