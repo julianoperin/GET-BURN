@@ -10,11 +10,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 .form {
   width: 100%;
-  max-width: 920px;
+  max-width: 1000px;
   background-color: #f7f3f0;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -71,7 +72,7 @@ form {
 }
 
 .title {
-  color: #fff;
+  color: #f7f3f0;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
@@ -86,7 +87,7 @@ form {
 .input {
   width: 100%;
   outline: none;
-  border: 2px solid #fafafa;
+  border: 2px solid #f7f3f0;
   background: none;
   padding: 0.6rem 1.2rem;
   color: #fff;
@@ -111,7 +112,7 @@ textarea.input {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: #fafafa;
+  color: #f7f3f0;
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
@@ -126,8 +127,8 @@ textarea.input {
 
 .btn {
   padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 2px solid #fafafa;
+  background-color: #f7f3f0;
+  border: 2px solid #f7f3f0;
   font-size: 0.95rem;
   color: #292b31;
   line-height: 1;
@@ -135,12 +136,13 @@ textarea.input {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .btn:hover {
   background-color: transparent;
-  color: #fff;
+  color: #f7f3f0;
 }
 
 .input-container span {
@@ -234,8 +236,8 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #292b31, #fff);
-  color: #fff;
+  background: linear-gradient(45deg, #292b31, #ffeb00);
+  color: #f7f3f0;
   text-align: center;
   line-height: 35px;
   margin-right: 0.5rem;

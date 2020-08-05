@@ -305,7 +305,7 @@ $white: #ffffff;
   min-height: 100vh;
   margin-top: 20vh;
   .container-home {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   .features-inner {
@@ -328,6 +328,9 @@ $white: #ffffff;
         margin-bottom: 88px;
       }
       .btn-row {
+        a {
+          opacity: 0;
+        }
         a {
           color: $blue;
           text-decoration: none;
