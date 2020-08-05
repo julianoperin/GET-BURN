@@ -1,5 +1,4 @@
 import "./scss/app.scss";
-import home from "./components/home";
 import animateSlides from "./components/hero-two"; // first 3 slides
 import detailAnimation from "./components/yoga"; // second 3 slides
 import contactForm from "./components/contact";
@@ -7,14 +6,13 @@ import contactForm from "./components/contact";
 animateSlides();
 detailAnimation();
 contactForm();
-// home();
 
 // NAV TOGGLE
 const burger = document.querySelector(".wrap-burger");
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
-    gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
+    gsap.to(".line1", 0.5, { rotate: "45", y: 4, background: "black" });
     gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "black" });
     gsap.to("#logo", 1, { color: "black" });
     gsap.to(".social-media li", 1, { color: "black" });
@@ -24,21 +22,11 @@ function navToggle(e) {
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
-    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "#d1d5da" });
-    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "#d1d5da" });
-    gsap.to("#logo", 1, { color: "#d1d5da" });
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "#292b31" });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "#292b31" });
+    gsap.to("#logo", 1, { color: "#292b31" });
     gsap.to(".social-media li", 1, { color: "#d1d5da" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 52% -10%)" });
-    gsap.to(
-      ".nav-header",
-      1,
-      {
-        delay: 0.5,
-        boxShadow:
-          "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)",
-      },
-      "-=1"
-    );
     gsap.to(".product-img", 1, { delay: 0.5, visibility: "visible" });
     document.body.classList.remove("hide");
   }
@@ -152,55 +140,55 @@ window.addEventListener("mouseover", activeCursor);
 
 //! Code for home section
 
-TweenMax.from(".nav-header", 1.6, {
-  delay: 1.6,
+TweenMax.from(".nav-header", 1, {
+  delay: 0.5,
   y: "-50px",
   opacity: 0,
   ease: Expo.easeInOut,
 });
 
-TweenMax.to(".product-img", 1.6, {
-  delay: 1.6,
+TweenMax.to(".product-img", 1, {
+  delay: 1,
   opacity: 1,
   visibility: "visible",
   ease: Expo.easeInOut,
 });
 
-TweenMax.to(".ellipse-container", 1.6, {
-  delay: 1.9,
+TweenMax.to(".ellipse-container", 1, {
+  delay: 2,
   opacity: 1,
   visibility: "visible",
   ease: Expo.easeInOut,
 });
 
-TweenMax.from(".left", 1.6, {
+TweenMax.from(".left", 1, {
   delay: 0.6,
   width: 0,
   ease: Expo.easeInOut,
 });
 
-TweenMax.from(".right", 1.6, {
+TweenMax.from(".right", 1, {
   delay: 0.6,
   width: 0,
   ease: Expo.easeInOut,
 });
 
-TweenMax.from(".product-title", 1.6, {
-  delay: 1.6,
+TweenMax.from(".product-title", 1, {
+  delay: 1,
   opacity: 0,
   x: 80,
   ease: Expo.easeInOut,
 });
 
-TweenMax.from(".scroll-down", 1.6, {
+TweenMax.from(".scroll-down", 1, {
   delay: 1.8,
   opacity: 0,
   x: 80,
   ease: Expo.easeInOut,
 });
 
-TweenMax.from(".line span", 1.6, {
-  delay: 1.6,
+TweenMax.from(".line span", 1, {
+  delay: 1,
   y: 80,
   duration: 0.8,
   ease: Expo.easeInOut,
@@ -209,7 +197,7 @@ TweenMax.from(".line span", 1.6, {
   },
 });
 
-TweenMax.from(".btn-row", 1.6, {
+TweenMax.from(".btn-row", 1, {
   delay: 2,
   opacity: 0,
   y: 80,

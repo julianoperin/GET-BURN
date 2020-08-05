@@ -1,6 +1,6 @@
 @import "main";
 @import "home";
-@import "pilates";
+@import "programs";
 @import "cursor";
 @import "navbar";
 @import "yoga";
@@ -9,3 +9,14 @@
 @import "contact.scss";
 
 @import "./normalize.scss";
+
+//! VARIABLES
+
+$main-white: #f7f3f0;
+$strong-black: #292b31;
+$strong-yellow: #ffeb00;
+$strong-gray: #979695;
+$light-gray: #d1d5da;
+$light-yellow: #feeb6a;
+$bege-color: #c6b390;
+$color: #d1d5da !important;

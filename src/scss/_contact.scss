@@ -1,5 +1,6 @@
 .about-section {
   overflow: hidden !important;
+  animation: opening 2s ease-in-out forwards;
 }
 
 .container-contact {
@@ -10,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .form {
@@ -89,7 +90,7 @@ form {
   outline: none;
   border: 2px solid #f7f3f0;
   background: none;
-  padding: 0.6rem 1.2rem;
+  padding: 1rem 1.2rem;
   color: #fff;
   font-weight: 500;
   font-size: 0.95rem;
@@ -344,4 +345,23 @@ textarea.input {
   .btn {
     padding: 0.45rem 1.2rem;
   }
+}
+
+//! Animation
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal-img-contact {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #f7f3f0;
+  left: 0;
+  top: -15%;
 }
