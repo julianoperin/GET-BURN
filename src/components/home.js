@@ -83,6 +83,47 @@ const home = () => {
     x: 200,
     ease: Expo.easeInOut,
   });
+
+  //! Features
+  const featuresContentTitle = document.querySelector(".features-content h3");
+  const featuresContentP = document.querySelector(".features-content p");
+  const featuresContentButton = document.querySelector(
+    ".features-content .btn-row"
+  );
+  const featuresList = document.querySelectorAll(".features-list li");
+
+  const featuresTl = gsap.timeline();
+
+  featuresTl
+    .from([featuresContentTitle, featuresContentP, featuresContentButton], {
+      opacity: 0,
+      y: 40,
+      duration: 0.6,
+      ease: "powe3.out",
+      stagger: {
+        amount: 0.2,
+      },
+    })
+    .from(featuresList, {
+      delay: -0.4,
+      opacity: 0,
+      y: 40,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: {
+        amount: 0.4,
+      },
+    });
+
+  const controller = new ScrollMagic.Controller();
+  const scene = new ScrollMagic.Scene({
+    triggerElement: ".circle2",
+    triggerHook: 0,
+    reverse: false,
+  })
+    .addIndicators()
+    .setTween(featuresTl)
+    .addTo(controller);
 };
 
 export default home;
