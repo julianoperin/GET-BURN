@@ -2,10 +2,12 @@ import "./scss/app.scss";
 import home from "./components/home";
 import animateSlides from "./components/hero-two"; // first 3 slides
 import detailAnimation from "./components/yoga"; // second 3 slides
+import contactForm from "./components/contact";
 
 home();
 animateSlides();
 detailAnimation();
+contactForm();
 
 // NAV TOGGLE
 const burger = document.querySelector(".wrap-burger");
@@ -84,7 +86,7 @@ window.addEventListener("mouseover", activeCursor);
 // barba.init({
 //   views: [
 //     {
-//       namespace: "pilates",
+//       namespace: "home",
 //       beforeEnter() {
 //         animateSlides();
 //         logo.href = "./index.html";
@@ -96,7 +98,7 @@ window.addEventListener("mouseover", activeCursor);
 //       },
 //     },
 //     {
-//       namespace: "yoga",
+//       namespace: "programs",
 //       beforeEnter() {
 //         logo.href = "../index.html"; //! verify
 //         detailAnimation();
@@ -116,7 +118,7 @@ window.addEventListener("mouseover", activeCursor);
 //         tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
 //         tl.fromTo(
 //           ".swipe",
-//           0.5,
+//           0.75,
 //           { x: "-100%" },
 //           { x: "0%", onComplete: done },
 //           "-=0.5"
@@ -124,20 +126,26 @@ window.addEventListener("mouseover", activeCursor);
 //       },
 //       enter({ current, next }) {
 //         let done = this.async();
-//         window.scrollTo(0, 0); // move the next page to the top
+//         //Scroll to the top
+//         window.scrollTo(0, 0);
 //         //An Animation
 //         const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 //         tl.fromTo(
 //           ".swipe",
-//           0.5,
+//           1,
 //           { x: "0%" },
 
-//           { x: "100%", stagger: 0.5, onComplete: done }
+//           { x: "100%", stagger: 0.2, onComplete: done }
 //         );
 //         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
+//         tl.fromTo(
+//           ".nav-header",
+//           1,
+//           { y: "-100%" },
+//           { y: "0%", ease: "power2.inOut" },
+//           "-=1.5"
+//         );
 //       },
 //     },
 //   ],
 // });
-
-

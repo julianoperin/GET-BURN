@@ -14,9 +14,9 @@
     <title>Get Burn</title>
   </head>
   <!-- Add code for barba.js -->
-  <body class="about-sec">
+  <body data-barba="wrapper" class="about-sec">
     <header class="nav-header">
-      <h1  class="flex-logo"><a href="pilates.html" id="logo">BURN</a></h1>
+      <h1  class="flex-logo"><a href="programs.html" id="logo">BURN</a></h1>
       <div class="burger flex">
         <div class="wrap-burger">
         <div class="line1"></div>
@@ -24,7 +24,7 @@
       </div>
       </div>
       <div>
-        <div class="social-media media-flex">
+        <div class="social-media-icons media-flex">
           <ul>
             <li><i class="fa fa-twitter"></i></li>
             <li><i class="fa fa-instagram"></i></li>
@@ -33,7 +33,9 @@
       </div>
     </header>
     <!-- Add code for barba.js -->
-    <main> 
+    <main       class="wrap-all"
+    data-barba="container"
+    data-barba-namespace="about"> 
       <section>
         <section class="mountain slide about-sec">
           <div class="hero-desc about-text">
@@ -64,7 +66,7 @@
           <a href="index.html">Home</a>
         </li>
         <li>
-          <a href="pilates.html">Pilates</a>
+          <a href="programs.html">Programs</a>
         </li>
         <li>
           <a href="yoga.html">Yoga</a>
