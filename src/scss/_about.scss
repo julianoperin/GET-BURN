@@ -1,6 +1,6 @@
 .about-sec {
   overflow: hidden;
-  overla .about-text {
+  .about-text {
     padding: 0rem 3rem 0rem 0rem !important;
     margin: 0 !important;
     font-size: 2rem !important;
@@ -10,4 +10,9 @@
   .text-about {
     line-height: 2rem;
   }
+}
+
+.about-team {
+  font-size: 3.5rem;
+  color: red;
 }

@@ -69,159 +69,203 @@ burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
 
-//Barba Page Transitions
-// const logo = document.querySelector("#logo");
-// barba.init({
-//   views: [
-//     {
-//       namespace: "home",
-//       beforeEnter() {
-//         animateSlides();
-//         logo.href = "./index.html";
-//       },
-//       beforeLeave() {
-//         slideScene.destroy();
-//         pageScene.destroy(); //! delete
-//         controller.destroy();
-//       },
-//     },
-//     {
-//       namespace: "programs",
-//       beforeEnter() {
-//         logo.href = "../index.html"; //! verify
-//         detailAnimation();
-//       },
-//       beforeLeave() {
-//         controller.destroy();
-//         detailScene.destroy();
-//       },
-//     },
-//   ],
-//   transitions: [
-//     {
-//       leave({ current, next }) {
-//         let done = this.async();
-//         //An Animation
-//         const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-//         tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
-//         tl.fromTo(
-//           ".swipe",
-//           0.75,
-//           { x: "-100%" },
-//           { x: "0%", onComplete: done },
-//           "-=0.5"
-//         );
-//       },
-//       enter({ current, next }) {
-//         let done = this.async();
-//         //Scroll to the top
-//         window.scrollTo(0, 0);
-//         //An Animation
-//         const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-//         tl.fromTo(
-//           ".swipe",
-//           1,
-//           { x: "0%" },
+// Barba Page Transitions
+const logo = document.querySelector("#logo");
+barba.init({
+  views: [
+    {
+      namespace: "home",
+      beforeEnter() {
+        animateSlides();
+        homeCode();
+        logo.href = "./index.html";
+      },
+      beforeLeave() {
+        slideScene.destroy();
+        pageScene.destroy(); //! delete
+        controller.destroy();
+      },
+    },
+    {
+      namespace: "about",
+      beforeEnter() {
+        logo.href = "../index.html"; //! verify
+        animateSlides();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "programs",
+      beforeEnter() {
+        logo.href = "../index.html"; //! verify
+        animateSlides();
+        detailAnimation();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "yoga",
+      beforeEnter() {
+        logo.href = "../index.html"; //! verify
+        detailAnimation();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "contact",
+      beforeEnter() {
+        logo.href = "../index.html"; //! verify
+        contactForm();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+  ],
+  transitions: [
+    {
+      leave({ current, next }) {
+        let done = this.async();
+        //An Animation
+        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
+        burger.classList.remove("active");
+        gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "#292b31" });
+        gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "#292b31" });
+        gsap.to("#logo", 1, { color: "#292b31" });
+        gsap.to(".social-media li", 1, { color: "#d1d5da" });
+        gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 52% -10%)" });
+        gsap.to(".product-img", 1, { delay: 0.5, visibility: "visible" });
+        document.body.classList.remove("hide");
+        tl.fromTo(
+          ".swipe",
+          0.75,
+          { x: "-100%" },
+          { x: "0%", onComplete: done },
+          "-=0.5"
+        );
+      },
+      enter({ current, next }) {
+        let done = this.async();
+        //Scroll to the top
+        window.scrollTo(0, 0);
+        //An Animation
+        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        tl.fromTo(
+          ".swipe",
+          1,
+          { x: "0%" },
 
-//           { x: "100%", stagger: 0.2, onComplete: done }
-//         );
-//         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
-//         tl.fromTo(
-//           ".nav-header",
-//           1,
-//           { y: "-100%" },
-//           { y: "0%", ease: "power2.inOut" },
-//           "-=1.5"
-//         );
-//       },
-//     },
-//   ],
-// });
+          { x: "100%", stagger: 0.2, onComplete: done }
+        );
+        tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
+        tl.fromTo(
+          ".nav-header",
+          1,
+          { y: "-100%" },
+          { y: "0%", ease: "power2.inOut" },
+          "-=1.5"
+        );
+      },
+    },
+  ],
+});
 
 //! Code for home section
+function homeCode() {
+  TweenMax.from(".nav-header", 1, {
+    delay: 0.5,
+    y: "-50px",
+    opacity: 0,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".nav-header", 1, {
-  delay: 0.5,
-  y: "-50px",
-  opacity: 0,
-  ease: Expo.easeInOut,
-});
+  TweenMax.to(".product-img", 1, {
+    delay: 1,
+    opacity: 1,
+    visibility: "visible",
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.to(".product-img", 1, {
-  delay: 1,
-  opacity: 1,
-  visibility: "visible",
-  ease: Expo.easeInOut,
-});
+  TweenMax.to(".ellipse-container", 1, {
+    delay: 2,
+    opacity: 1,
+    visibility: "visible",
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.to(".ellipse-container", 1, {
-  delay: 2,
-  opacity: 1,
-  visibility: "visible",
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".left", 1, {
+    delay: 0.6,
+    width: 0,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".left", 1, {
-  delay: 0.6,
-  width: 0,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".right", 1, {
+    delay: 0.6,
+    width: 0,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".right", 1, {
-  delay: 0.6,
-  width: 0,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".product-title", 1, {
+    delay: 1,
+    opacity: 0,
+    x: 80,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".product-title", 1, {
-  delay: 1,
-  opacity: 0,
-  x: 80,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".scroll-down", 1, {
+    delay: 1.8,
+    opacity: 0,
+    x: 80,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".scroll-down", 1, {
-  delay: 1.8,
-  opacity: 0,
-  x: 80,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".line span", 1, {
+    delay: 1,
+    y: 80,
+    duration: 0.8,
+    ease: Expo.easeInOut,
+    stagger: {
+      amount: 0.4,
+    },
+  });
 
-TweenMax.from(".line span", 1, {
-  delay: 1,
-  y: 80,
-  duration: 0.8,
-  ease: Expo.easeInOut,
-  stagger: {
-    amount: 0.4,
-  },
-});
+  TweenMax.from(".btn-row", 1, {
+    delay: 2,
+    opacity: 0,
+    y: 80,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".btn-row", 1, {
-  delay: 2,
-  opacity: 0,
-  y: 80,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".circle1", 1, {
+    delay: 2.4,
+    opacity: 0,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".circle1", 1, {
-  delay: 2.4,
-  opacity: 0,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".circle2", 1, {
+    delay: 2.6,
+    opacity: 0,
+    ease: Expo.easeInOut,
+  });
 
-TweenMax.from(".circle2", 1, {
-  delay: 2.6,
-  opacity: 0,
-  ease: Expo.easeInOut,
-});
-
-TweenMax.from(".watchnow", 1, {
-  delay: 2.7,
-  opacity: 0,
-  x: 200,
-  ease: Expo.easeInOut,
-});
+  TweenMax.from(".watchnow", 1, {
+    delay: 2.7,
+    opacity: 0,
+    x: 200,
+    ease: Expo.easeInOut,
+  });
+}
 
 //! Features
 const featuresContentTitle = document.querySelector(".features-content h3");
