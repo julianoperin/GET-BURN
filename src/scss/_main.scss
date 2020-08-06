@@ -30,15 +30,16 @@ body {
   left: 0;
   transform: translateX(-100%);
 }
+
 .swipe1 {
-  background: #ffeb00;
+  background: #292b31;
   z-index: 5;
 }
 .swipe2 {
-  background: white;
+  background: #ffeb00;
   z-index: 4;
 }
 .swipe3 {
-  background: red;
+  background: #292b31;
   z-index: 3;
 }

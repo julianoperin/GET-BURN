@@ -184,36 +184,24 @@ barba.init({
 //! Code for home section
 function homeCode() {
   TweenMax.from(".nav-header", 1, {
-    delay: 0.5,
+    delay: 1,
     y: "-50px",
     opacity: 0,
     ease: Expo.easeInOut,
   });
 
   TweenMax.to(".product-img", 1, {
-    delay: 1,
+    delay: 0.5,
     opacity: 1,
     visibility: "visible",
     ease: Expo.easeInOut,
   });
 
   TweenMax.to(".ellipse-container", 1, {
-    delay: 2,
+    delay: 1.8,
     opacity: 1,
     visibility: "visible",
-    ease: Expo.easeInOut,
-  });
-
-  TweenMax.from(".left", 1, {
-    delay: 0.6,
-    width: 0,
-    ease: Expo.easeInOut,
-  });
-
-  TweenMax.from(".right", 1, {
-    delay: 0.6,
-    width: 0,
-    ease: Expo.easeInOut,
+    ease: Expo.easeIn,
   });
 
   TweenMax.from(".product-title", 1, {
@@ -248,19 +236,19 @@ function homeCode() {
   });
 
   TweenMax.from(".circle1", 1, {
-    delay: 2.4,
+    delay: 1.6,
     opacity: 0,
     ease: Expo.easeInOut,
   });
 
   TweenMax.from(".circle2", 1, {
-    delay: 2.6,
+    delay: 1.7,
     opacity: 0,
     ease: Expo.easeInOut,
   });
 
   TweenMax.from(".watchnow", 1, {
-    delay: 2.7,
+    delay: 1.5,
     opacity: 0,
     x: 200,
     ease: Expo.easeInOut,
