@@ -270,7 +270,7 @@ featuresTl
     opacity: 0,
     y: 40,
     duration: 0.6,
-    ease: "powe3.out",
+    ease: "power3.out",
     stagger: {
       amount: 0.2,
     },
