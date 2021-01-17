@@ -1,2 +1,3 @@
 # GET-BURN
-Crossfit website built with HTML, SASS, JS, GSAP and BARBA.js.
+Crossfit, pilates, yoga website built with HTML, SASS, JS, GSAP and BARBA.js.
+
